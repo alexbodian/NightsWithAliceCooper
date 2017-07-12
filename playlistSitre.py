@@ -28,13 +28,19 @@ dr.click()
 
 # ENTER makes it so that new line is made when called
 
+# textBody = ''
 
-textBody = 'kek'
+# dr.send_keys(textBody)
+# dr.send_keys(Keys.SHIFT, Keys.ENTER)
 
-dr.send_keys(textBody)
-dr.send_keys(Keys.SHIFT, Keys.ENTER)
-dr.send_keys('kek')
 
+# opening the file for pasting
+f1 = open('aliceCooper.txt', 'r')
+
+for line in open('aliceCooper.txt'):
+
+    dr.send_keys(f1.readline())
+    dr.send_keys(Keys.SHIFT, Keys.ENTER)
 
 
 #  submits the playlist text that was entered into the textbox
