@@ -18,6 +18,7 @@ from selenium import webdriver
 
 from selenium.webdriver.common.keys import Keys
 
+
 driver = webdriver.Firefox()
 driver.get("http://www.playlist-converter.net/#/")
 
@@ -25,5 +26,17 @@ driver.get("http://www.playlist-converter.net/#/")
 dr = driver.find_element_by_name('text')
 dr.click()
 
+# ENTER makes it so that new line is made when called
+
+
+textBody = 'kek'
+
+dr.send_keys(textBody)
+dr.send_keys(Keys.SHIFT, Keys.ENTER)
 dr.send_keys('kek')
-dr.send_keys('/n')
+
+
+
+#  submits the playlist text that was entered into the textbox
+submit = driver.find_element_by_name('importtxtfreetext')
+submit.click()
